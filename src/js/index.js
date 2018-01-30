@@ -12,3 +12,21 @@ $(window).on('load', function() { // makes sure the whole site is loaded
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
   $('body').delay(350).css({'overflow':'visible'});
 })
+
+var $page		= $('html, body');
+var	workSection		= $('#details');
+var topMargin	= 75;
+var duration	= 800;
+
+$('.arrow').click(function(){
+	var navId = workSection;
+	indexNav(navId);
+});
+
+
+function indexNav(navId){
+	var id = navId;
+	var scrollEnd =$(id).offset().top - topMargin;
+	
+	$page.animate({scrollTop:scrollEnd},duration,"ease");
+}
