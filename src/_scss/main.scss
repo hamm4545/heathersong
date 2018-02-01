@@ -36,7 +36,7 @@ body{
 		height: 100%;
 		display: block;
 		background-color: rgba(0,0,0,0.4);
-		z-index: -1;
+		z-index: 0;
 	}
 }
 
@@ -89,6 +89,7 @@ a{
 	color: white;
 	text-align: right;
 	padding-bottom: 24px;
+	z-index: 5;
 }
 
 video{
@@ -152,7 +153,8 @@ main{
 		width: 45px;
 		height: 45px;
 		margin: 25px;	
-		grid-column: 1 / -1;		
+		grid-column: 1 / -1;	
+		z-index: 5;	
 	}
 
 	.details{
@@ -228,7 +230,6 @@ section{
 
 	}
 }
-
 
 .browser-version{
 	display: none;

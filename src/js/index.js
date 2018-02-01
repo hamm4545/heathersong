@@ -64,15 +64,7 @@ var isIE = /*@cc_on!@*/false || !!document.documentMode, // Internet Explorer 6-
 if(isIE || isEdge) {
  	$('.browser-version').addClass('show').parent().find('main').addClass('hide');
 }
-// var ver = navigator.userAgent;
-// if (ver.indexOf('Edge') !== -1)
-// {
-// 	$('.browser-version').addClass('show').parent().find('main').addClass('hide');
-// }
-// else
-// {
-// // Not Edge, do nothing
-// }
+
 
 // add details to debug result
 // document.getElementById('browser-details').innerHTML = window.navigator.userAgent;
