@@ -1,12 +1,9 @@
-console.log(`I've been required by Webpack`);
 var $ = require("jquery");
 import './es6code'; // hello there!
 import './jQuery-easing-v1.3'; 
 import backgroundVideo from '../img/background-video.mp4';
 import mobileBackground from '../img/mobile-background.jpg';
 
-
-console.log($.fn.jquery);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('.status').fadeOut(); // will first fade out the loading animation 
@@ -28,9 +25,17 @@ var	workSection		= $('#details');
 var topMargin	= 75;
 var duration	= 800;
 
-$('.arrow').click(function(){
-	var navId = workSection;
-	indexNav(navId);
+// $('.arrow').click(function(e){
+//    e.preventDefault();
+// 	var navId = workSection;
+// 	indexNav(navId);
+// });
+
+
+$('.arrow').on('click', function(e){
+   e.preventDefault();
+  var navId = workSection;
+  indexNav(navId);
 });
 
 function indexNav(navId){
@@ -41,6 +46,8 @@ function indexNav(navId){
 }
 
 $('.toTop').on('click', function(e){
+  e.preventDefault();
+
 	$('html, body').animate({
       scrollTop: 0
     }, duration, "easeInOutExpo");
