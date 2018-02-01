@@ -10,11 +10,12 @@
   /* change if the mask should have another color then white */
   z-index: 99;
   /* makes sure it stays on top */
+  
 }
 
 .status {
-  width: 100px;
-  height: 100px;
+  width: 76px;
+  height: 76px;
   position: absolute;
   left: 50%;
   /* centers the loading animation horizontally one the screen */

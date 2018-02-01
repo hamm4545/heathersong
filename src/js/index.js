@@ -10,9 +10,18 @@ console.log($.fn.jquery);
 
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('.status').fadeOut(); // will first fade out the loading animation 
+
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  $('body').delay(350).css({'overflow':'visible'});
-})
+ 
+  // $('#preloader').delay(350).fadeOut('slow', function(){
+  //     $(window).css("overflow","auto");
+  // });
+  $('body').delay(350).removeClass('loading');
+  // $('body').delay(350).css({'overflow-y':'visible'});
+});
+
+
+
 
 var $page		= $('html, body');
 var	workSection		= $('#details');
